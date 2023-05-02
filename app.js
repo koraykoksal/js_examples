@@ -1,5 +1,23 @@
 
+console.log("JavaScript Running");
 
-var x = 8;
+const pi = 3.14;
 
-console.log(x);
+//pi = 5; //const ile tnaımlanan değişkene atama yapılamaz
+
+//değişkenin tipi gösterir.
+//console.log(typeof pi)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
