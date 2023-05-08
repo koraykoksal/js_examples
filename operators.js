@@ -317,3 +317,8 @@ console.log(
 // 3. || (or)
 const karşilaştırma = ("merhaba" && "dünya") || false || (28 && 67 && !0);
 console.log(karşilaştırma); // dünya
+
+
+
+
+
