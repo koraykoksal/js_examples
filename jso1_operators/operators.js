@@ -321,4 +321,11 @@ console.log(karşilaştırma); // dünya
 
 
 
+const deger = prompt('deger gir');
 
+if(deger % 2 == 0){
+  console.log("ok")
+}
+else{
+  console.log("nok")
+}
