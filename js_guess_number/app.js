@@ -28,6 +28,8 @@ while(1){
 
     hak++;
 
+
+
     if(hak==3){
         alert(`Deneme hakkınız bitti : ${hak}`)
 
@@ -36,10 +38,10 @@ while(1){
 
         break
 
-        
     }
     
-
-    
 }
+
+
+
 
