@@ -56,28 +56,28 @@ document.getElementById("myButton").onclick=function(){
 
 
   if(calc > 90){
-      sonuc='AA'
+      sonuc='AA 😎'
   }
   else if(calc > 80 && calc <= 90){
-      sonuc='AB'
+      sonuc='AB 😊'
   }
   else if(calc > 70 && calc <= 80){
-      sonuc='BB'
+      sonuc='BB 🙂'
   }
   else if(calc > 60 && calc <= 70){
-      sonuc='BC'
+      sonuc='BC 😐'
   }
   else if(calc > 50 && calc <= 60){
-      sonuc='CC'
+      sonuc='CC 😢'
   }
   else if(calc > 40 && calc <= 50){
-      sonuc='CD'
+      sonuc='CD 😤'
   }
   else if(calc > 30 && calc <= 40){
-      sonuc='DD'
+      sonuc='DD 😰'
   }
   else if(calc <= 30){
-      sonuc='FF'
+      sonuc='FF 🥵'
   }
   else{
     sonuc="Lütfen Değer Giriniz"
@@ -85,6 +85,7 @@ document.getElementById("myButton").onclick=function(){
 
   document.querySelector("#nameinfo").innerHTML = namesurname;
   document.querySelector("#sonuc").innerHTML = sonuc;
+  
 
   
 
