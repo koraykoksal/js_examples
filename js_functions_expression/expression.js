@@ -57,6 +57,8 @@ console.log("KARE:", kareAl(4))
 console.log("TOPLA:", topla(4, 5))
 ciktiVer()
 
+
+
 //* ORNEK4: 3 sayinin en buyugunu bulan fonks.
 //***********************************************/
 //! Süslü parantez kullanıldığnda otomatik returning ozelligi kaybolur
