@@ -71,6 +71,7 @@ const findBiggest = (n1, n2, n3) => {
   if (n3 >= biggest) {
     biggest = n3
   }
+  
   return biggest
 }
 
