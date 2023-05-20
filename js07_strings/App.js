@@ -58,21 +58,54 @@
 // console.log(value1.indexOf(value2));
 
 
-const indexOfAll = () => {
-    let word = prompt("Please enter your centense");    //index değeri i
-    let letter = prompt("Which letter do you want to search");  koray[i]    //aradığın değerler
-    let indexAll = "";
-    let count = 0;
-    for (let i=0; i<word.length; i++){
-        if (word[i] == letter) {
-            indexAll += i + " ";
-            count++;
-        }
-    }   
-    if (count>0){
-        console.log(indexAll);
-    }else{
-        console.log(-1);
+// const indexOfAll = () => {
+//     let word = prompt("Please enter your centense");    //index değeri i
+//     let letter = prompt("Which letter do you want to search");  koray[i]    //aradığın değerler
+//     let indexAll = "";
+//     let count = 0;
+//     for (let i=0; i<word.length; i++){
+//         if (word[i] == letter) {
+//             indexAll += i + " ";
+//             count++;
+//         }
+//     }   
+//     if (count>0){
+//         console.log(indexAll);
+//     }else{
+//         console.log(-1);
+//     }
+// }
+// indexOfAll();
+
+
+// const x = 6 % 2;
+// const y = x ? "One" : "Two";
+
+// console.log(y);
+
+
+// function reverseWord(x){
+//     //return x.split(" ") //boşluklara ayırarak print yapıyor
+//     return x.split(" ").reverse().join(" ")
+// }
+// console.log(reverseWord("? doing you are how hi"));
+
+
+
+
+
+let word = "Clarusway Rocks !";
+
+function reverse(words){
+
+    let result ="";
+
+    for(let i = word.length-1; i>=0;i--){
+
+        result +=word[i]
+
     }
+    return result;
 }
-indexOfAll();
+
+console.log(reverse(word));
