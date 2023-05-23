@@ -67,34 +67,92 @@ const arr = values.filter(v => v.maas <= 5500).map(z => z.maas *1.50)
 
 
 
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [4, 5, 6, 7, 8];
 
-const height=+prompt("Please enter your height : ")
-const weight=+prompt("Please enter your weight : ")
+// let same=[]
 
-const wh = [weight,height]
+// for(let i=0;i<arr1.length;i++){
 
-const wh2 = wh.filter(r => r < 100)
+//     for(let j=0;j<arr2.length;j++){
+
+//         if(arr1[i] == arr2[j]){
+
+//             same.push(arr1[i])
+//         }
+//     }
+
+// }
+
+// console.log(same);
+
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [4, 5, 6, 7, 8];
+
+// const result= arr1.filter((num,i)=>{
+
+//     if(arr1.includes(arr2[i])){
+//      console.log(arr2[i]);
+
+//     }
+// })
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [4, 5, 6, 7, 8];
+
+const samelist = []
+
+const same = arr1.filter((num,i) => {
+
+    if(arr1.includes(arr2[i])){
+
+        samelist.push(arr2[i])
+
+    }
+})
+
+//console.log(samelist);
 
 
-console.log(wh2);
+
+
+// İşlev: Bir dizideki kelime uzunluğu 5'ten büyük olan kelimeleri filtrelerip yazdırın
+
+const words = ['apple', 'banana', 'grapefruit', 'kiwi', 'orange'];
+
+const morethan5 = words.filter((w5) =>{
+
+    return w5.length > 5
+})
+
+//console.log(morethan5);
 
 
 
 
 
+// İşlev: Bir dizideki sayıları tersine çevirerek yeni bir dizi oluştururunuz yani her sayıyı tersten yazdırmamız isteniyor
+
+const numbers = [123, 456, 789];
+
+const newnumbers=[]
 
 
+// newnumbers.push(numbers.reverse())
+
+// console.log(newnumbers);
 
 
+for(let i = 0;i<numbers.length;i++){
 
 
+    // newnumbers.push(reverse(numbers[i]))
+    newnumbers.push(numbers[i])
+
+}
 
 
-
-
-
-
-
+console.log(newnumbers);
 
 
 
