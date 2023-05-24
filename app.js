@@ -150,7 +150,7 @@ const cc = [{name:'koray',surname:'koksal',age:39},
             {name:'cumhuriyet varsa', surname:'demokrasi var',age:1000}];
 
 
-// const result = cc.map((values)=>{
+//const result = cc.map((values)=>{
 
 //     //free.push(values.name.concat(" "+values.surname))
 

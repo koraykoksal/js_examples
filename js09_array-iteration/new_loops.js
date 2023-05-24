@@ -152,12 +152,110 @@ for(let i = 0;i<numbers.length;i++){
 }
 
 
-console.log(newnumbers);
+//console.log(newnumbers);
 
 
 
 
+const deger = [1,2,3,4,5]
 
+let sonuc = []
+
+deger.forEach(myfunk)
+
+function myfunk(value,index,array){
+
+    sonuc.push(value+" "+index+" "+array)
+
+    
+}
+
+//console.log(sonuc);
+
+
+
+//const value1 = +prompt("Please enter value1 : ")
+//const value2 = +prompt("Please enter value2 : ")
+
+
+// const total = [value1,value2]
+
+
+// const result= total.map((v) => Number(v*value1)/Number(v*value2) )
+
+//console.log(result);
+
+
+
+const mydizi=[20,5,4,6]
+
+const newdizi=[]
+
+let sum = 0
+
+mydizi.forEach((d,i) => {
+
+    newdizi.push((5*d))
+})
+
+console.log(newdizi);
+
+
+
+const mm=[[1,2,3]]
+
+console.log(typeof(mm));
+
+
+const tlPrice = [200,100,600,300,1400,60]
+
+
+const pp=[]
+
+
+const result = tlPrice.map((c,z)=> pp.push(tlPrice[z]*5))
+
+console.log(pp.sort((a,b) => a-b))
+
+console.log(typeof(result));
+
+
+// const id=+prompt("User ID : ")
+// const ad = prompt("Ad : ")
+// const soyad = prompt("Soyad : ")
+// const salary = +prompt("Ücret : ")
+const byear = +prompt("Doğum yılı : ")
+const myobj={
+
+    // id:id,
+    // name:ad,
+    // surname:soyad,
+    // salary:salary,
+    byear:byear,
+    age:function(){
+        // age=(new Date().getFullYear() - byear)
+
+        let dd = new Date().getFullYear()
+        return this.age= (dd - this.byear)
+    }
+    
+
+}
+
+
+// myobj.salary=6500
+
+
+// if(myobj.salary >= 6500){
+
+//     myobj.salary*=1.5
+// }
+// else{
+
+//     myobj.salary*=1.7
+// }
+
+console.log(myobj);
 
 
 

@@ -139,3 +139,16 @@ const slr=[]
 const moreThan10 = salary.filter(salary => salary < 9000).map(zamli => (zamli * 1.30).toFixed(2))
 
 console.log(moreThan10);
+
+
+
+
+
+
+
+
+
+
+
+
+
