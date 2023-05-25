@@ -138,16 +138,15 @@ for(let i=0;i<sides.length;i++){
 
 // console.log(sides2);
 
-
-let free = []
-
-const cc = [{name:'koray',surname:'koksal',age:39},
+const teams = [{name:'koray',surname:'koksal',age:39},
             {name:'mehmet', surname:'tanrivermis',age:25},
             {name:'mustafa', surname:'ceceli',age:38},
             {name:'emanuel', surname:'icardi',age:40},
             {name:'fernando', surname:'muslera',age:42},
             {name:'ali', surname:'veli',age:20},
-            {name:'cumhuriyet varsa', surname:'demokrasi var',age:1000}];
+            {name:'cumhuriyet varsa', surname:'demokrasi var',age:78}
+        
+];
 
 
 //const result = cc.map((values)=>{
@@ -162,17 +161,216 @@ const cc = [{name:'koray',surname:'koksal',age:39},
 // })
 
 
-for(let i = 0;i<cc.length;i++){
+// for(let i = 0;i<cc.length;i++){
 
-    if(cc[i].age >=40 && cc[i].age <50){
-        free.push(cc[i])
-    }
-
-
+//     if(cc[i].age >=40 && cc[i].age <50){
+//         free.push(cc[i])
+//     }
     
+// }
+
+
+
+
+//Ornek4: Yasi(age) 22 'den kucuk esit olan kisilerin adlarini (name) listeyiniz.
+
+let bos=[]
+const lessThan22=teams.filter((v) => {
+
+    return v.age<=22
+
+})
+
+
+//Ornek5: 22 yasindan kucuk ve esit olanlarin isimlerini diziye saklayiniz.
+
+
+let vv=[]
+//const lessThan22andEq=teams.filter((v) => v.age<=22).map(c => vv.push(c.name))
+
+
+//console.log(vv);
+
+
+//Ornek6: ortalama yasi hesaplayiniz.
+
+let ageAvg=0
+let totalAge=0
+let indexSayisi=0
+const ortalama=teams.forEach((v,i) => {
+
+
+    ageAvg=(totalAge+=v.age) / (indexSayisi=i)
+})
+
+
+//console.log(ageAvg.toFixed(1));
+
+
+const fullstack = [
+    { name: "Ahmet", surname: "Can", job: "Developer", age: 30 },
+    { name: "Mary", surname: "Bary", job: "tester", age: 22 },
+    { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
+]
+
+
+
+//* Ornek4: Yasi(age) 22 'den kucuk esit olan kisilerin adlarini (name) listeyiniz.
+
+
+const resul2=fullstack.filter(g => g.age<=22)
+
+console.log(resul2);
+
+
+//* Ornek5: 22 yasindan kucuk ve esit olanlarin isimlerini diziye saklayiniz.
+
+const boss=[]
+
+const lessThann22 = fullstack.filter((v) => v.age <= 22).map(i=> boss.push(i.name))
+
+console.log(boss);
+
+//* Ornek6: ortalama yasi hesaplayiniz.
+
+
+let ageTotal=0
+let ageavg=0
+let count=0
+
+
+fullstack.forEach((v,f)=>{
+
+   ageAvg= (ageTotal+=v.age) / (count+=f)
+})
+
+console.log(`yaş ortalaması : ${ageAvg}`);
+
+
+
+
+
+//! DESTRUCTURİNG (ARRAY)
+//sıra çok önemlidir
+
+const names = ["ahmet","mehmet"]
+
+
+const [aa,mm]=names
+
+console.log(aa,mm);
+
+
+
+
+//! REST OPERATOR
+//bir dizi veya objedeki bazı değerleir ayırıp kullanabilir
+//! bu işlem yapılıtken isim ve sıra çok önemlidir
+
+const araclar =["bmw","vw","toyota","bugatti","rover"]
+
+const [araba1,araba2,...gerikalan]=araclar
+
+console.log(`araba 1 : ${araba1}`)
+console.log(`geri kalan arabalar : ${gerikalan}`);;
+
+
+
+const kişi={
+
+    ad:'koray',
+    soyad:'koksal',
+    job:'developer',
+    age:29
 }
 
-console.log(free);
+const {isim,...bilgi}=kişi
+
+console.log(isim)
+console.log(bilgi)
+
+
+//! SPREAD METODU
+//iki farklı diziyi tek bir dizi içinde birleştirme işlemi
+
+const meyve=['elma','armut','portakal']
+const sebze=['marul','maydonoz','havuç']
+
+const vec=[...meyve,...sebze]
+
+console.log(vec);
+
+
+
+const meyve2={elma:'tatlı'}
+const sebze2={kilo:1}
+
+const vec2={...meyve2,...sebze2}
+
+console.log(vec2);
+
+
+
+//STRİNG BİR İFADEYİ DİZİ ŞEKLİNDE YAPMA
+//! MÜLAKATLARDA ÇIKAN BİR SORU
+const words="olmak ya da olmamak"
+
+const words2=[...words]
+
+console.log(words2);
+
+
+
+
+
+//! ÖRNEK ÇALIŞMA
+
+//? nested
+const people = {
+    person1: {
+      name: "Can",
+      surname: "Canan",
+      dob: "1990",
+      job: "developer",
+      salary: "140000",
+      drivingLicense: true,
+    },
+    person2: {
+      name: "John",
+      surname: "Sweet",
+      dob: "1990",
+      job: "tester",
+      salary: "110000",
+      drivingLicense: false,
+    },
+    person3: {
+      name: "Steve",
+      surname: "Job",
+      dob: "2000",
+      job: "developer",
+      salary: "90000",
+      drivingLicense: true,
+    },
+  }
+
+//? for in dönügüsü kullanımı
+
+for(let i in people){
+
+    console.log(people[i].salary);
+
+}
+
+
+//? for of döngüsü kullanımı
+
+
+
+
+
+
+
+
 
 
 
