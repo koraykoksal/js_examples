@@ -413,67 +413,82 @@ User.prototype.login=function(){
 
 
 
-console.log(1 + '2' +'2');
+// console.log(1 + '2' +'2');
 
 
 
-console.log(typeof typeof 1);
+// console.log(typeof typeof 1);
 
 
 
-const a = ['dog','lion','hen']
+// const a = ['dog','lion','hen']
 
-a[100]='horse'
-
-
-console.log(a.length);
+// a[100]='horse'
 
 
-const dessert = { type: 'pie' };
-dessert.type = 'pudding';
+// console.log(a.length);
 
 
-const employee = {
-    name: "John",
-    surname: "Doe",
-    age: 33,
-    languages: ["C++", "Go", "Java", "Javascript"],
-    salary: 10000,
-}
-
-for (let i = 0; i < employee.languages.length; i++) {
-    console.log(employee.languages[i])
-   }
+// const dessert = { type: 'pie' };
+// dessert.type = 'pudding';
 
 
+// const employee = {
+//     name: "John",
+//     surname: "Doe",
+//     age: 33,
+//     languages: ["C++", "Go", "Java", "Javascript"],
+//     salary: 10000,
+// }
 
-   let arr1 = [1, 2, 3, 4, 5];
-   let arr2 = [4, 5, 6, 7, 8];
+// for (let i = 0; i < employee.languages.length; i++) {
+//     console.log(employee.languages[i])
+//    }
+
+
+
+//    let arr1 = [1, 2, 3, 4, 5];
+//    let arr2 = [4, 5, 6, 7, 8];
    
-   let same=[]
+//    let same=[]
 
-for(let i=0;i<arr1.length;i++){
-    for(let j=0;j<arr2.length;j++){
-        if(arr1[i] == arr2[j]){
-            same.push(arr1[i])
-        }
+// for(let i=0;i<arr1.length;i++){
+//     for(let j=0;j<arr2.length;j++){
+//         if(arr1[i] == arr2[j]){
+//             same.push(arr1[i])
+//         }
+//     }
+// }
+
+
+
+// const res=arr1.filter((num,i) => {
+
+//     if(arr1.includes(arr2[i])){
+//         console.log(arr2[i]);
+//     }
+// })
+
+console.log('****************************************');
+
+let newKisiler=[]
+const sayi = Math.floor(Math.random()*13)
+
+const kisiler=['koray','mehmet','ali','gokmen','goksal','fulya','şeyma','mehmet emin','sinan','zeki','hasan','sefa','ömer faruk']
+
+const result = kisiler.forEach((v,i) => {
+
+
+
+    if(sayi == i){
+
+        newKisiler.push(i)
+        console.log('random sonuc :',sayi);
+        console.log('liste sonuc : ',v,i);
+        console.log(newKisiler);
     }
-}
 
-
-
-const res=arr1.filter((num,i) => {
-
-    if(arr1.includes(arr2[i])){
-        console.log(arr2[i]);
-    }
 })
-
-
-
-
-
-
 
 
 
