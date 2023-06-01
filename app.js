@@ -472,17 +472,16 @@ User.prototype.login=function(){
 console.log('****************************************');
 
 let newKisiler=[]
-const sayi = Math.floor(Math.random()*13)
 
-const kisiler=['koray','mehmet','ali','gokmen','goksal','fulya','şeyma','mehmet emin','sinan','zeki','hasan','sefa','ömer faruk']
+const sayi = Math.floor(Math.random()*14)
+
+const kisiler=['koray','mehmet','ali','gokmen','goksal','fulya','şeyma','mehmet emin','sinan','zeki','hasan','sefa','ömer faruk','eda']
 
 const result = kisiler.forEach((v,i) => {
 
-
-
     if(sayi == i){
 
-        newKisiler.push(i)
+        newKisiler.push(v,i)
         console.log('random sonuc :',sayi);
         console.log('liste sonuc : ',v,i);
         console.log(newKisiler);
