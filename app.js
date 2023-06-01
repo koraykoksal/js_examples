@@ -469,28 +469,70 @@ User.prototype.login=function(){
 //     }
 // })
 
-console.log('****************************************');
+// console.log('****************************************');
 
-let newKisiler=[]
+// let newKisiler=[]
 
-const sayi = Math.floor(Math.random()*14)
+// const sayi = Math.floor(Math.random()*14)
 
-const kisiler=['koray','mehmet','ali','gokmen','goksal','fulya','şeyma','mehmet emin','sinan','zeki','hasan','sefa','ömer faruk','eda']
+// const kisiler=['koray','mehmet','ali','gokmen','goksal','fulya','şeyma','mehmet emin','sinan','zeki','hasan','sefa','ömer faruk','eda']
 
-const result = kisiler.forEach((v,i) => {
+// const result = kisiler.forEach((v,i) => {
 
-    if(sayi == i){
+//     if(sayi == i){
 
-        newKisiler.push(v,i)
-        console.log('random sonuc :',sayi);
-        console.log('liste sonuc : ',v,i);
-        console.log(newKisiler);
-    }
+//         newKisiler.push(v,i)
+//         console.log('random sonuc :',sayi);
+//         console.log('liste sonuc : ',v,i);
+//         console.log(newKisiler);
+//     }
 
-})
-
-
+// })
 
 
 
+// Requiring modules
+const express = require('express');
+const app = express();
+const mssql = require("mysql");
 
+
+const sqlServer='KARCYNB031\SQLEXPRESS'
+
+// Get request
+app.get('/', function (req, res) {
+ 
+    // Config your database credential
+    const config = {
+        user: 'sa',
+        password: '4155Kk--',
+        server:sqlServer,
+        database: 'bonna_hr'
+    };
+ 
+    // Connect to your database
+    mssql.connect(config, function (err) {
+ 
+        // Create Request object to perform
+        // query operation
+        let request = new mssql.Request();
+ 
+        // Query to the database and get the records
+        request.query('select * from student',
+            function (err, records) {
+ 
+                if (err) console.log(err)
+ 
+                // Send records as a response
+                // to browser
+                res.send(records);
+ 
+            });
+
+        
+    });
+});
+ 
+let server = app.listen(5000, function () {
+    console.log('Server is listening at port 5000...');
+});
