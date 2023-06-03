@@ -7,7 +7,7 @@ const btn=document.getElementById('btnfind')
 
 const wolwesWord = document.getElementById('wolwes')
 
-const sesliler = 'aeoöuüiAEOÖUÜIı';
+const sesliler = 'aeoöıiuüAEOÖIİUÜ';
 
 const same=[]
 
