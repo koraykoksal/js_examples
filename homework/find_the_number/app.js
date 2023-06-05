@@ -4,8 +4,8 @@ const btn = document.getElementById("button");
 const error = document.getElementById("error");
 let hak = document.getElementById("hak");
 let pcValue = 0;
-let attempts = 2;
-
+let attempts = 5;
+const saveUserNumber=[]
 
 //kullanıcı aynı sayıyı girdiğinde hakkından düşmesin ve giridiği sayıyı kontrol etsin uyarı verisn bu sayıyı daha önce girdiniz desin.
 //kullanıcının girdiği sayı pcden büyükse user.value max değer olacak (0-user value ) arası değer olacak. min-max arası değerler dinamik hale gelecek.
@@ -16,6 +16,8 @@ btn.addEventListener("click", (e) => {
 
   pcValue = Math.floor(Math.random() * 100) + 1;
 
+  saveUserNumber.push(input.value)  //kullanıcıdan gelen rakarmları kayıt et
+
   if (input.value < 0 || input.value > 100) {
 
     error.innerHTML = "Lütfen 1 - 100 arasinda değer giriniz";
@@ -23,28 +25,48 @@ btn.addEventListener("click", (e) => {
 
   } else {
 
+    
     if (attempts) {
 
-      hak.innerHTML=Number(attempts--)
+      
+      for(let i=0;i<saveUserNumber.length;i++){
 
-      if (input.value > pcValue) {
+        if(i==0){
+          continue
+        }
+        else{
+          
+          hak.innerHTML=Number(attempts--)
 
-        error.innerHTML = "Daha küçük bir sayi giriniz";
-        input.value = "";
-        input.value.focus();
+          if (input.value > pcValue) {
+    
+            error.innerHTML = "Daha küçük bir sayi giriniz";
+            input.value = "";
+            input.value.focus();
+    
+        
+          } else if (input.value < pcValue) {
+        
+            error.innerHTML = "Daha büyük bir sayi giriniz";
+            input.value = "";
+            input.value.focus();
+    
+        
+          } else if (input.vale == pcValue) {
+        
+            error.innerHTML = "Tebrikler bildiniz";
+            error.style = "color: green; font-size: 50px";
+          }
 
-      } else if (input.value < pcValue) {
-
-        error.innerHTML = "Daha büyük bir sayi giriniz";
-        input.value = "";
-        input.value.focus();
-
-      } else if (input.vale == pcValue) {
-
-        error.innerHTML = "Tebrikler bildiniz";
-        error.style = "color: green; font-size: 50px";
+        }
       }
-    } else {
+
+
+
+      
+      
+    } 
+    else {
 
       error.innerHTML = "Maalesef hiç hakkniz kalmamiştir.";
       
