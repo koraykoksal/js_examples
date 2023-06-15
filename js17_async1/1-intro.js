@@ -31,16 +31,16 @@ let count = 1
 
 //! clearInterval yardımıyla sürekli devam eden Interval pasif hale getirilir. clearInterval kullanmak için setInterval dan bir ID bilgisi alınması gerekir. (setInterval number değer döndürdüğü için bir değişkene bağlayarak alınan değer ID olarak kullanılır.)
 
-const deger = setInterval(()=>{
+// const deger = setInterval(()=>{
 
 //conut değerini bir bir artırır
-console.log(count++);
+// console.log(count++);
 
-if(count > 10){
-    clearInterval(deger)
-}
+// if(count > 10){
+//     clearInterval(deger)
+// }
 
-},1000)
+// },1000)
 
 
 
@@ -50,24 +50,27 @@ if(count > 10){
 //* yapisinin kullanilmasi gerekebilir. Fakat bu iyi bir programlama yaklasimi degildir.
 // !callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
 
-setTimeout(() => {
-    console.log("john:Hi")
-    setTimeout(() => {
-      console.log("Sarah: Hello")
-      setTimeout(() => {
-        console.log("John: How Are you?")
-        setTimeout(() => {
-          console.log("Sarah:Fine and you?")
-        }, 1000)
-      }, 1000)
-    }, 1000)
-  }, 1000)
+// setTimeout(() => {
+//     console.log("john:Hi")
+//     setTimeout(() => {
+//       console.log("Sarah: Hello")
+//       setTimeout(() => {
+//         console.log("John: How Are you?")
+//         setTimeout(() => {
+//           console.log("Sarah:Fine and you?")
+//         }, 1000)
+//       }, 1000)
+//     }, 1000)
+//   }, 1000)
 
 
 
 
+let ss = new Date()
 
+let m = ss.getSeconds()
 
+console.log(m);
 
 
 
