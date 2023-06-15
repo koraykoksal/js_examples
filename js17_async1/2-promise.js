@@ -33,22 +33,92 @@
 console.log("Promise")
 
 
-const networkReq = new Promise((resolve,reject)=>{
+//! PROMİSE YAPISI
 
-    const data={a:1,b:2}
-    const success = Math.floor(Math.random()*5) //0-4 arası sayı üret
+// const networkReq = new Promise((resolve,reject)=>{
 
-    if(success){
-        console.log("data fethed");
-        resolve(data)
-    }
-    else{
-        reject(new Error("network err."))
-    }
+//     const data={a:1,b:2}
+//     const success = Math.floor(Math.random()*5) //0-4 arası sayı üret
 
-})
+//     if(success){
+//         console.log("data fethed");
+//         resolve(data)
+//     }
+//     else{
+//         reject(new Error("network err."))
+//     }
+
+// })
 
 //işlem başarılısı ise .then ile yakalanır
 //işlem hatalı ise .catch ile yakalanır
-networkReq.then((res) => console.log(res)).catch((err)=>console.log(err))
+// networkReq
+// .then((res) => console.log(res))
+// .catch((err)=>console.log(err))
+
+
+//? try-catch-finally yapısı
+
+// try{
+//     networkReq
+//     .then((res) => console.log(res))
+// }
+// catch(err){
+//     document.write(err)
+// }
+// finally{
+//     console.log("her zaman çalışır");
+// }
+
+
+
+//! FETCH  API YAPISI
+//promise yapısından sonra geliştirilmiş ve basitleştirilmiş halidir.
+
+
+//istek atmak isteriyorsan öcne fetch metodunu çağır
+//istek atıldıktan sonra .then içinde convert json yap
+// süslü parentez açıldığı zaman return yapılması gerekiyor
+
+
+// fetch("https://api.github.com/users")
+// .then((response)=>{
+
+//     console.log(response.ok);
+//     return response.json()
+// })
+// .then((res)=>console.log(res[1]))
+
+const img = document.querySelector('.img')
+
+
+let size="150x150"
+let adress = "www.youtube.com"
+
+let src=""
+
+fetch(`https://api.qrserver.com/v1/create-qr-code/?size=${size}&data=${adress}`)
+.then((response)=>{
+
+    src = response.url
+    
+    domaYaz()
+
+    return response
+
+    
+})
+
+
+const domaYaz=()=>{
+
+    img.innerHTML +=`
+    <img src="${src}" alt="">
+    
+    `
+}
+
+
+
+
 
