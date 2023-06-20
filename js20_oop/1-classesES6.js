@@ -9,17 +9,6 @@
 console.log("**** Object Literals ****")
 
 
-//Object
-const book1 = {
-  title: "The Karamazov Brothers",
-  author: "Dostoevski",
-  year: 1886,
-  getSummary: function () {
-    return `${this.title} was written by ${this.author} in ${this.year}`
-  },
-}
-
-
 class Book{
 
   //bir kalıp çağırıldığında kullanılan kalıptır.
@@ -32,9 +21,51 @@ class Book{
 
   }
 
+  //obje içidne yazılan function Prototype olarak isimlendirilir ve console log tarafında prototype olarak görünür.
+  getSummary(){
+
+    return `${this.title} was written by ${this.author} in ${this.year}`
+  }
+
 }
 
-const book3 = new Book("My Book","koray",1993)
+
+const result1 = new Book("My Book","koray",1993)
+console.log(result1);
 
 
-console.log(book3);
+
+//? Book clas üzerinden Sub-Class ı oluşturma
+
+class maganize extends Book{
+
+  constructor(title,author,year,month){
+
+    // clasın parentını çağırmış oluyorsun ve parent clasının contructoruna bilgi göndermiş oluyor.
+    
+    super(title,author,year)
+    
+    this.month = month
+  }
+
+  //? Overridding (Polymorphism)
+  getSummary(){
+
+    return `${this.title} was written by ${this.author} in ${this.year}`
+  }
+
+}
+
+
+const result2 = new maganize("new book","koksal",1990,"June")
+
+console.log(result2);
+
+
+
+
+
+
+
+
+
